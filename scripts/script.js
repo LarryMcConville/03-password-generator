@@ -24,8 +24,9 @@ function writePassword() {
 
 // Generate a password based upon the user specified length and character selection.
 function generatePassword() {
-  //reinitialize textarea so users can generate additional passwords in the same session.
-
+  //reinitialize newUserPassword and combinedArray so users can generate additional passwords in the same session.
+  newUserPassword = '';
+  combinedArray = [];
   // Prompt user for desired password length.
   var passwordLength = prompt("Please enter a password length between 8 - 128 characters");
 
