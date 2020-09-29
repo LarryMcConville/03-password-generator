@@ -24,9 +24,10 @@ function writePassword() {
 
 // Generate a password based upon the user specified length and character selection.
 function generatePassword() {
-  //reinitialize newUserPassword and combinedArray so users can generate additional passwords in the same session.
+  //reinitialize newUserPassword and combinedArray so users can generate additional passwords within the same session.
   newUserPassword = '';
   combinedArray = [];
+
   // Prompt user for desired password length.
   var passwordLength = prompt("Please enter a password length between 8 - 128 characters");
 
@@ -39,7 +40,7 @@ function generatePassword() {
     var includeUpper = confirm("Include UPPER case characters?");
     var includeNumbers = confirm("Include Numbers 0 - 9?");
 
-    //   if all items are false alert user they must make at least one selection
+    //   if no selections were made alert user they must make at least one selection
     if (!includeSpecial && !includeLower && !includeUpper && !includeNumbers) {
       alert("You must make at least one character selection!");
     } else {
@@ -62,7 +63,7 @@ function generatePassword() {
 
       //   Loop through the array for the specified password length
       for (i = 0; i < passwordLength; i++) {
-        newUserPassword = newUserPassword + combinedArray[Math.floor(Math.random() * combinedArray.length)];
+        newUserPassword += combinedArray[Math.floor(Math.random() * combinedArray.length)];
       }
 
     }
