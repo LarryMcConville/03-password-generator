@@ -45,7 +45,7 @@ The `generatePassword()` iterates over the combinedArray for the length of the p
 * The newly generated character is appened to the `newUserPassword` variable.
 
 When the loop is completed the newly generated password is returned from `generatePassword()` to `writePassword()` where it is presented to the user in the `index.html` UI.  The `newUserPassword` and `combinedArray` variables are re-initialized each time the user clicks the `Generate Password` button so that multiple passwords may be generated within the same Browser session.
-
+### [Deployed Application](https://larrymcconville.github.io/03-password-generator/)
 ## HTML
 `scripts` and `style` subdirectories were created for code organization.  The paths to these resources were modified in the HTML.
 
